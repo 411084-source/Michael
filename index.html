@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>地區資訊查詢</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>地區資訊查詢</h1>
+        <div class="input-section">
+            <label for="country-input">請輸入國家或地區名稱：</label>
+            <input type="text" id="country-input" placeholder="例如：中國、美國、日本">
+            <button id="search-btn">查詢</button>
+        </div>
+        <div id="result" class="result hidden">
+            <h2 id="country-name"></h2>
+            <div class="info-section">
+                <h3>地理</h3>
+                <p id="geography"></p>
+            </div>
+            <div class="info-section">
+                <h3>歷史</h3>
+                <p id="history"></p>
+            </div>
+            <div class="info-section">
+                <h3>社會現狀</h3>
+                <p id="society"></p>
+            </div>
+            <div class="info-section">
+                <h3>未來發展猜測</h3>
+                <p id="future"></p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
