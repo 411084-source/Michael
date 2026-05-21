@@ -3,35 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>地區資訊查詢</title>
+    <title>英文單字翻頁卡</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>地區資訊查詢</h1>
-        <div class="input-section">
-            <label for="country-input">請輸入國家或地區名稱：</label>
-            <input type="text" id="country-input" placeholder="例如：中國、美國、日本">
-            <button id="search-btn">查詢</button>
+        <h1>英文單字翻頁卡</h1>
+        <p class="subtitle">點擊卡片翻到背面，查看中文解釋、詞性、例句與字根分析。</p>
+        <div class="card-scene" aria-label="Vocabulary flashcard">
+            <div class="card" id="vocab-card">
+                <div class="card-face card-front" id="card-front">
+                    <div class="card-content">
+                        <span class="label">English</span>
+                        <h2 id="word">loading</h2>
+                    </div>
+                </div>
+                <div class="card-face card-back" id="card-back">
+                    <div class="card-content">
+                        <span class="label">中文解釋</span>
+                        <p id="definition"></p>
+                        <div class="detail-row"><strong>詞性：</strong><span id="part-of-speech"></span></div>
+                        <div class="detail-row"><strong>例句：</strong><span id="example"></span></div>
+                        <div class="detail-row"><strong>字根分析：</strong><span id="root"></span></div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div id="result" class="result hidden">
-            <h2 id="country-name"></h2>
-            <div class="info-section">
-                <h3>地理</h3>
-                <p id="geography"></p>
-            </div>
-            <div class="info-section">
-                <h3>歷史</h3>
-                <p id="history"></p>
-            </div>
-            <div class="info-section">
-                <h3>社會現狀</h3>
-                <p id="society"></p>
-            </div>
-            <div class="info-section">
-                <h3>未來發展猜測</h3>
-                <p id="future"></p>
-            </div>
+        <div class="controls">
+            <button id="prev-btn">上一張</button>
+            <button id="next-btn">下一張</button>
+        </div>
+        <div class="notes">
+            <p>提示：按卡片任一位置即可翻頁。</p>
         </div>
     </div>
     <script src="script.js"></script>
